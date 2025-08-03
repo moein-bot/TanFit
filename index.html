@@ -1,5 +1,175 @@
 <!DOCTYPE html>
-<html lang="fa" dir="rtl">
-<!-- (تمام محتوای HTML قبلی اینجا قرار می‌گیرد. در اینجا صرفه‌جویی شده است چون قبلاً در ویرایش اعمال شد.) -->
-<!-- برای نسخه واقعی، باید همان کدی که قبلاً اعمال کردیم، داخل این فایل قرار گیرد. -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TanFit - Your Health & Fitness Partner</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Animated Background -->
+    <div class="animated-bg">
+        <div class="bg-element"></div>
+        <div class="bg-element"></div>
+        <div class="bg-element"></div>
+        <div class="bg-element"></div>
+        <div class="bg-element"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <h2>TanFit</h2>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="services.html" class="nav-link">Services</a></li>
+                <li><a href="about.html" class="nav-link">About Us</a></li>
+                <li><a href="contact.html" class="nav-link">Contact Us</a></li>
+                <li><a href="profile.html" class="nav-link">Profile</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Transform Your Health with Science-Based Nutrition</h1>
+            <p>Get personalized diet plans based on food science, sports science, anatomy, and biology</p>
+            <button class="cta-button" onclick="scrollToServices()">Start Your Journey</button>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <h2 class="section-title">Choose Your Path to Health</h2>
+            <div class="services-grid">
+                <!-- Muscle Gain Service -->
+                <div class="service-card" data-service="muscle-gain">
+                    <div class="service-icon">
+                        <i class="fas fa-dumbbell"></i>
+                    </div>
+                    <h3>Muscle Gain</h3>
+                    <p>Build lean muscle mass with scientifically designed nutrition plans</p>
+                    <div class="service-details">
+                        <ul>
+                            <li>High protein optimization</li>
+                            <li>Pre/post workout nutrition</li>
+                            <li>Muscle recovery focus</li>
+                            <li>Progressive calorie cycling</li>
+                        </ul>
+                        <button class="service-btn" onclick="startDietPlan('muscle-gain')">Start Plan</button>
+                    </div>
+                </div>
+
+                <!-- Fat Loss Service -->
+                <div class="service-card" data-service="fat-loss">
+                    <div class="service-icon">
+                        <i class="fas fa-fire"></i>
+                    </div>
+                    <h3>Fat Loss</h3>
+                    <p>Lose fat while preserving muscle with metabolic nutrition strategies</p>
+                    <div class="service-details">
+                        <ul>
+                            <li>Metabolic rate optimization</li>
+                            <li>Fat burning nutrition</li>
+                            <li>Sustainable deficit approach</li>
+                            <li>Body composition focus</li>
+                        </ul>
+                        <button class="service-btn" onclick="startDietPlan('fat-loss')">Start Plan</button>
+                    </div>
+                </div>
+
+                <!-- Healthy Living Service -->
+                <div class="service-card" data-service="healthy-living">
+                    <div class="service-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3>Happy Life Diet</h3>
+                    <p>Maintain optimal health and energy for everyday wellness</p>
+                    <div class="service-details">
+                        <ul>
+                            <li>Balanced macro nutrients</li>
+                            <li>Energy optimization</li>
+                            <li>Mood supporting foods</li>
+                            <li>Long-term sustainability</li>
+                        </ul>
+                        <button class="service-btn" onclick="startDietPlan('healthy-living')">Start Plan</button>
+                    </div>
+                </div>
+
+                <!-- Professional Athletes Service -->
+                <div class="service-card" data-service="professional-athlete">
+                    <div class="service-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <h3>Professional Athletes</h3>
+                    <p>Elite performance nutrition for competitive athletes</p>
+                    <div class="service-details">
+                        <ul>
+                            <li>Performance optimization</li>
+                            <li>Competition preparation</li>
+                            <li>Recovery enhancement</li>
+                            <li>Sport-specific nutrition</li>
+                        </ul>
+                        <button class="service-btn" onclick="startDietPlan('professional-athlete')">Start Plan</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- BMI Calculator Section -->
+            <div class="bmi-section">
+                <div class="bmi-calculator">
+                    <h3><i class="fas fa-calculator"></i> BMI Calculator</h3>
+                    <div class="bmi-form">
+                        <div class="input-group">
+                            <label for="height">Height (cm)</label>
+                            <input type="number" id="height" placeholder="Enter your height">
+                        </div>
+                        <div class="input-group">
+                            <label for="weight">Weight (kg)</label>
+                            <input type="number" id="weight" placeholder="Enter your weight">
+                        </div>
+                        <button onclick="calculateBMI()" class="bmi-btn">Calculate BMI</button>
+                        <div id="bmi-result" class="bmi-result"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <h2>Why Choose TanFit?</h2>
+            <div class="features-grid">
+                <div class="feature">
+                    <i class="fas fa-microscope"></i>
+                    <h3>Science-Based</h3>
+                    <p>Our diets are based on food science, sports science, anatomy, and biology</p>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-user-md"></i>
+                    <h3>Personalized</h3>
+                    <p>Every plan is tailored to your unique body composition and goals</p>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-chart-line"></i>
+                    <h3>Results Driven</h3>
+                    <p>Track your progress with detailed nutrition and health metrics</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
 </html>
