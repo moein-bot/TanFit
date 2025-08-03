@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - TanFit</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="contact.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Animated Background -->
+    <div class="animated-bg">
+        <div class="bg-element"></div>
+        <div class="bg-element"></div>
+        <div class="bg-element"></div>
+        <div class="bg-element"></div>
+        <div class="bg-element"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <h2>TanFit</h2>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="services.html" class="nav-link">Services</a></li>
+                <li><a href="about.html" class="nav-link">About Us</a></li>
+                <li><a href="contact.html" class="nav-link active">Contact Us</a></li>
+                <li><a href="profile.html" class="nav-link">Profile</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-header">
+                <h1>Get in Touch</h1>
+                <p>We're here to help you on your health and fitness journey</p>
+            </div>
+
+            <div class="contact-forms">
+                <!-- Email Contact Form -->
+                <div class="contact-card email-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3>Email Us</h3>
+                    <p>Send us an email and we'll get back to you within 24 hours</p>
+                    
+                    <div class="contact-info">
+                        <div class="info-item">
+                            <i class="fas fa-at"></i>
+                            <span>moein.kh.82@gmail.com</span>
+                            <button class="copy-btn" onclick="copyToClipboard('moein.kh.82@gmail.com', this)">
+                                <i class="fas fa-copy"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="contact-form">
+                        <h4>Send a Message</h4>
+                        <form id="emailForm">
+                            <div class="form-group">
+                                <input type="text" id="name" placeholder="Your Name" required>
+                                <label for="name">Your Name</label>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" id="email" placeholder="Your Email" required>
+                                <label for="email">Your Email</label>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" id="subject" placeholder="Subject" required>
+                                <label for="subject">Subject</label>
+                            </div>
+                            <div class="form-group">
+                                <textarea id="message" placeholder="Your Message" rows="4" required></textarea>
+                                <label for="message">Your Message</label>
+                            </div>
+                            <button type="submit" class="submit-btn">
+                                <i class="fas fa-paper-plane"></i>
+                                Send Message
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Phone Contact Form -->
+                <div class="contact-card phone-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <h3>Call Us</h3>
+                    <p>Speak directly with our nutrition experts</p>
+                    
+                    <div class="contact-info">
+                        <div class="info-item">
+                            <i class="fas fa-mobile-alt"></i>
+                            <span>09100400633</span>
+                            <button class="copy-btn" onclick="copyToClipboard('09100400633', this)">
+                                <i class="fas fa-copy"></i>
+                            </button>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-phone-alt"></i>
+                            <span>09382069110</span>
+                            <button class="copy-btn" onclick="copyToClipboard('09382069110', this)">
+                                <i class="fas fa-copy"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="contact-form">
+                        <h4>Request a Call Back</h4>
+                        <form id="callbackForm">
+                            <div class="form-group">
+                                <input type="text" id="callbackName" placeholder="Your Name" required>
+                                <label for="callbackName">Your Name</label>
+                            </div>
+                            <div class="form-group">
+                                <input type="tel" id="callbackPhone" placeholder="Your Phone Number" required>
+                                <label for="callbackPhone">Your Phone Number</label>
+                            </div>
+                            <div class="form-group">
+                                <select id="preferredTime" required>
+                                    <option value="">Select Preferred Time</option>
+                                    <option value="morning">Morning (9 AM - 12 PM)</option>
+                                    <option value="afternoon">Afternoon (12 PM - 5 PM)</option>
+                                    <option value="evening">Evening (5 PM - 8 PM)</option>
+                                </select>
+                                <label for="preferredTime">Preferred Time</label>
+                            </div>
+                            <div class="form-group">
+                                <textarea id="callbackMessage" placeholder="Brief message about your inquiry" rows="3"></textarea>
+                                <label for="callbackMessage">Brief Message</label>
+                            </div>
+                            <button type="submit" class="submit-btn">
+                                <i class="fas fa-phone"></i>
+                                Request Call Back
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Additional Contact Info -->
+            <div class="additional-info">
+                <div class="info-section">
+                    <h3><i class="fas fa-clock"></i> Business Hours</h3>
+                    <p>Monday - Friday: 9:00 AM - 8:00 PM</p>
+                    <p>Saturday: 10:00 AM - 6:00 PM</p>
+                    <p>Sunday: Closed</p>
+                </div>
+                <div class="info-section">
+                    <h3><i class="fas fa-question-circle"></i> FAQ</h3>
+                    <p>Have questions? Check out our frequently asked questions or contact us directly.</p>
+                    <button class="faq-btn" onclick="window.location.href='faq.html'">View FAQ</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+    <script src="contact.js"></script>
+</body>
+</html>

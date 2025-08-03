@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services - TanFit</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="services.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Animated Background -->
+    <div class="animated-bg">
+        <div class="bg-element"></div>
+        <div class="bg-element"></div>
+        <div class="bg-element"></div>
+        <div class="bg-element"></div>
+        <div class="bg-element"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <h2>TanFit</h2>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="services.html" class="nav-link active">Services</a></li>
+                <li><a href="about.html" class="nav-link">About Us</a></li>
+                <li><a href="contact.html" class="nav-link">Contact Us</a></li>
+                <li><a href="profile.html" class="nav-link">Profile</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Services Section -->
+    <section class="services-section">
+        <div class="container">
+            <!-- Hero Section -->
+            <div class="services-hero">
+                <h1>Our Services</h1>
+                <p>Science-based nutrition plans tailored to your unique goals and lifestyle</p>
+            </div>
+
+            <!-- Diet Plans Section -->
+            <div class="diet-plans-section">
+                <h2 class="section-title">Personalized Diet Plans</h2>
+                
+                <div class="plans-grid">
+                    <!-- Muscle Gain Plan -->
+                    <div class="plan-card" data-plan="muscle-gain">
+                        <div class="plan-header">
+                            <div class="plan-icon">
+                                <i class="fas fa-dumbbell"></i>
+                            </div>
+                            <h3>Muscle Gain Diet</h3>
+                            <p class="plan-subtitle">Build lean muscle mass effectively</p>
+                        </div>
+                        
+                        <div class="plan-content">
+                            <div class="plan-description">
+                                <p>Our muscle gain diet is scientifically designed to optimize protein synthesis and support muscle growth through strategic nutrition timing and macronutrient distribution.</p>
+                            </div>
+                            
+                            <div class="plan-features">
+                                <h4>What's Included:</h4>
+                                <ul>
+                                    <li><i class="fas fa-check"></i> High-protein meal plans (1.6-2.2g per kg body weight)</li>
+                                    <li><i class="fas fa-check"></i> Pre and post-workout nutrition strategies</li>
+                                    <li><i class="fas fa-check"></i> Caloric surplus calculations based on your metabolism</li>
+                                    <li><i class="fas fa-check"></i> Muscle recovery optimization through nutrition</li>
+                                    <li><i class="fas fa-check"></i> Progressive nutrition adjustments</li>
+                                    <li><i class="fas fa-check"></i> Supplement recommendations (if needed)</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="plan-science">
+                                <h4>Scientific Foundation:</h4>
+                                <p>Based on sports nutrition research, muscle protein synthesis studies, and metabolic rate analysis to ensure optimal muscle building results.</p>
+                            </div>
+                            
+                            <div class="plan-pricing">
+                                <div class="price">Starting from $49</div>
+                                <button class="plan-btn" onclick="startDietPlan('muscle-gain')">Get Started</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Fat Loss Plan -->
+                    <div class="plan-card" data-plan="fat-loss">
+                        <div class="plan-header">
+                            <div class="plan-icon">
+                                <i class="fas fa-fire"></i>
+                            </div>
+                            <h3>Fat Loss Diet</h3>
+                            <p class="plan-subtitle">Lose fat while preserving muscle</p>
+                        </div>
+                        
+                        <div class="plan-content">
+                            <div class="plan-description">
+                                <p>Our fat loss program uses evidence-based metabolic strategies to create sustainable fat loss while maintaining lean muscle mass and energy levels.</p>
+                            </div>
+                            
+                            <div class="plan-features">
+                                <h4>What's Included:</h4>
+                                <ul>
+                                    <li><i class="fas fa-check"></i> Metabolic rate-based calorie deficit planning</li>
+                                    <li><i class="fas fa-check"></i> Fat-burning nutrition timing protocols</li>
+                                    <li><i class="fas fa-check"></i> Muscle-preserving protein strategies</li>
+                                    <li><i class="fas fa-check"></i> Hormone-optimizing meal patterns</li>
+                                    <li><i class="fas fa-check"></i> Sustainable lifestyle integration</li>
+                                    <li><i class="fas fa-check"></i> Body composition tracking guidance</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="plan-science">
+                                <h4>Scientific Foundation:</h4>
+                                <p>Grounded in metabolic research, thermodynamics principles, and body composition studies for effective and sustainable fat loss.</p>
+                            </div>
+                            
+                            <div class="plan-pricing">
+                                <div class="price">Starting from $39</div>
+                                <button class="plan-btn" onclick="startDietPlan('fat-loss')">Get Started</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Healthy Living Plan -->
+                    <div class="plan-card" data-plan="healthy-living">
+                        <div class="plan-header">
+                            <div class="plan-icon">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <h3>Happy Life Diet</h3>
+                            <p class="plan-subtitle">Optimal health and wellness</p>
+                        </div>
+                        
+                        <div class="plan-content">
+                            <div class="plan-description">
+                                <p>Our happy life diet focuses on overall wellness, energy optimization, and long-term health through balanced, sustainable nutrition practices.</p>
+                            </div>
+                            
+                            <div class="plan-features">
+                                <h4>What's Included:</h4>
+                                <ul>
+                                    <li><i class="fas fa-check"></i> Balanced macronutrient distribution</li>
+                                    <li><i class="fas fa-check"></i> Energy-boosting meal timing</li>
+                                    <li><i class="fas fa-check"></i> Mood-supporting nutrition strategies</li>
+                                    <li><i class="fas fa-check"></i> Digestive health optimization</li>
+                                    <li><i class="fas fa-check"></i> Immune system support through nutrition</li>
+                                    <li><i class="fas fa-check"></i> Long-term sustainability focus</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="plan-science">
+                                <h4>Scientific Foundation:</h4>
+                                <p>Based on nutritional psychology, metabolic health research, and longevity studies for comprehensive wellness optimization.</p>
+                            </div>
+                            
+                            <div class="plan-pricing">
+                                <div class="price">Starting from $29</div>
+                                <button class="plan-btn" onclick="startDietPlan('healthy-living')">Get Started</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Professional Athletes Plan -->
+                    <div class="plan-card" data-plan="professional-athlete">
+                        <div class="plan-header">
+                            <div class="plan-icon">
+                                <i class="fas fa-trophy"></i>
+                            </div>
+                            <h3>Professional Athletes</h3>
+                            <p class="plan-subtitle">Elite performance nutrition</p>
+                        </div>
+                        
+                        <div class="plan-content">
+                            <div class="plan-description">
+                                <p>Our elite athlete program provides advanced nutrition strategies for peak performance, recovery optimization, and competitive edge enhancement.</p>
+                            </div>
+                            
+                            <div class="plan-features">
+                                <h4>What's Included:</h4>
+                                <ul>
+                                    <li><i class="fas fa-check"></i> Sport-specific nutrition protocols</li>
+                                    <li><i class="fas fa-check"></i> Competition preparation strategies</li>
+                                    <li><i class="fas fa-check"></i> Advanced recovery nutrition</li>
+                                    <li><i class="fas fa-check"></i> Performance enhancement timing</li>
+                                    <li><i class="fas fa-check"></i> Hydration and electrolyte management</li>
+                                    <li><i class="fas fa-check"></i> Travel and competition day planning</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="plan-science">
+                                <h4>Scientific Foundation:</h4>
+                                <p>Utilizing cutting-edge sports nutrition research, exercise physiology, and performance optimization studies for competitive advantage.</p>
+                            </div>
+                            
+                            <div class="plan-pricing">
+                                <div class="price">Starting from $79</div>
+                                <button class="plan-btn" onclick="startDietPlan('professional-athlete')">Get Started</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- BMI Calculator Section -->
+            <div class="bmi-calculator-section">
+                <div class="bmi-calculator-card">
+                    <div class="bmi-header">
+                        <div class="bmi-icon">
+                            <i class="fas fa-calculator"></i>
+                        </div>
+                        <h3>BMI Calculator</h3>
+                        <p>Calculate your Body Mass Index and understand your health status</p>
+                    </div>
+                    
+                    <div class="bmi-content">
+                        <div class="bmi-info">
+                            <h4>What is BMI?</h4>
+                            <p>Body Mass Index (BMI) is a measure of body fat based on height and weight. It's a useful screening tool to categorize weight status and assess potential health risks.</p>
+                            
+                            <div class="bmi-categories">
+                                <div class="category-item">
+                                    <span class="category-range">Below 18.5</span>
+                                    <span class="category-label underweight">Underweight</span>
+                                </div>
+                                <div class="category-item">
+                                    <span class="category-range">18.5 - 24.9</span>
+                                    <span class="category-label normal">Normal weight</span>
+                                </div>
+                                <div class="category-item">
+                                    <span class="category-range">25.0 - 29.9</span>
+                                    <span class="category-label overweight">Overweight</span>
+                                </div>
+                                <div class="category-item">
+                                    <span class="category-range">30.0 and above</span>
+                                    <span class="category-label obese">Obese</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="bmi-calculator">
+                            <div class="calculator-form">
+                                <div class="input-row">
+                                    <div class="input-group">
+                                        <label for="height-service">Height (cm)</label>
+                                        <input type="number" id="height-service" placeholder="Enter your height" min="100" max="250">
+                                    </div>
+                                    <div class="input-group">
+                                        <label for="weight-service">Weight (kg)</label>
+                                        <input type="number" id="weight-service" placeholder="Enter your weight" min="30" max="300">
+                                    </div>
+                                </div>
+                                <button onclick="calculateServiceBMI()" class="calculate-btn">
+                                    <i class="fas fa-calculator"></i>
+                                    Calculate BMI
+                                </button>
+                                <div id="bmi-result-service" class="bmi-result"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Process Section -->
+            <div class="process-section">
+                <h2 class="section-title">How It Works</h2>
+                <div class="process-steps">
+                    <div class="step-card">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h3>Assessment</h3>
+                            <p>Complete our comprehensive questionnaire covering your health history, goals, lifestyle, and preferences.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="step-card">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h3>Analysis</h3>
+                            <p>Our AI system analyzes your data using scientific algorithms and nutritional databases.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="step-card">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h3>Customization</h3>
+                            <p>Receive your personalized diet plan with detailed meal schedules, recipes, and nutrition information.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="step-card">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <h3>Support</h3>
+                            <p>Get ongoing support, plan adjustments, and progress tracking throughout your journey.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ Section -->
+            <div class="faq-section">
+                <h2 class="section-title">Frequently Asked Questions</h2>
+                <div class="faq-container">
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>How accurate are the diet plans?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Our diet plans are based on peer-reviewed scientific research and are personalized using advanced algorithms that consider over 50 nutritional and lifestyle parameters.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>Can I modify my diet plan?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Yes! Your plan can be adjusted based on your progress, changing goals, or preferences. We provide regular updates and modifications as needed.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>How long does it take to see results?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Results vary by individual and goals, but most users report noticeable changes within 2-4 weeks of following their personalized plan consistently.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+    <script src="services.js"></script>
+</body>
+</html>
